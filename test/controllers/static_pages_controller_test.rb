@@ -1,7 +1,13 @@
-require "test_helper"
+require 'test_helper'
 
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  def setup
+    @base_title = 'Invoice App'
+  end
+
+  test 'Get Home Page' do
+    get root_path
+    assert_response :success
+    assert_select 'title', "Home | #{@base_title}"
+  end
 end
