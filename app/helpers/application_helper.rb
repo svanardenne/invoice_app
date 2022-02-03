@@ -1,11 +1,11 @@
 module ApplicationHelper
-  def full_title(title)
-    full_title = ''
-    full_title = if title
-                   "#{title} | Invoice App"
-                 else
-                   'Invoice App'
-                 end
-    full_title
+  # Returns the full title on a per-page basis
+  def full_title(page_title = '')
+    base_title = 'Invoice App'
+    if page_title.empty?
+      base_title
+    else
+      "#{page_title} | #{base_title}"
+    end
   end
 end
