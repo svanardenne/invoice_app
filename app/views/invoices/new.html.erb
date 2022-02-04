@@ -1,6 +1,92 @@
 <h1>New Invoice</h1>
 
 <%= form_for :invoice do |f| %>
-  <%= f.label :from_full_name %>
-  <%= f.text_field :from_full_name, autofocus: true %>
+  <div class="field">
+    <%= f.label :from_full_name %>
+    <%= f.text_field :from_full_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :from_email %>
+    <%= f.email_field :from_email  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :from_phone %>
+    <%= f.text_field :from_phone  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :from_address %>
+    <%= f.text_field :from_address  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :from_country %>
+    <%= f.text_field :from_country  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :from_province %>
+    <%= f.text_field :from_province  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :from_postal_code %>
+    <%= f.text_field :from_postal_code  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :from_notes %>
+    <%= f.text_field :from_notes  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :to_full_name %>
+    <%= f.text_field :to_full_name  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :to_email %>
+    <%= f.text_field :to_email  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :to_phone %>
+    <%= f.text_field :to_phone  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :to_address %>
+    <%= f.text_field :to_address  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :to_country %>
+    <%= f.text_field :to_country  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :to_province %>
+    <%= f.text_field :to_province  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :to_postal_code %>
+    <%= f.text_field :to_postal_code  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :to_notes %>
+    <%= f.text_field :to_notes  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.text_field :status  %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Create Invoice" %>
+  </div>
 <% end %>
