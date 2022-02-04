@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_04_070701) do
+ActiveRecord::Schema.define(version: 2022_02_04_071944) do
+
+  create_table "invoice_items", force: :cascade do |t|
+    t.date "date"
+    t.text "description"
+    t.decimal "hours"
+    t.decimal "price"
+    t.decimal "amount"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "invoices", force: :cascade do |t|
     t.string "from_full_name"
