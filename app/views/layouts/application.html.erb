@@ -14,10 +14,15 @@
     <%= render 'layouts/header' %>
     <div class="container">
        <% flash.each do |key, message| %>
-        <%= content_tag(:div, message, :class => "flash #{key}") %>
+        <% if key == 'notice' %>
+          <%= content_tag(:div, message, :class => "alert alert-success") %>
+        <% elsif key == 'alert' %>
+          <%= content_tag(:div, message, :class => "alert alert-danger") %>
+        <% else %>
+          <%= content_tag(:div, message, :class => "alert alert-#{key}") %>
+        <% end %>
       <% end %>
       <%= yield %>
     </div>
-
   </body>
 </html>
