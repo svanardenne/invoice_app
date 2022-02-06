@@ -9,6 +9,7 @@ module ApplicationHelper
     end
   end
 
+  # Creates active sladd onlinks if the page is correct
   def current_class?(test_path)
     return 'active' if request.path == test_path
 
