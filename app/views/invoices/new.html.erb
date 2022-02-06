@@ -95,3 +95,11 @@
     <%= select_tag :invoice_template, options_from_collection_for_select(InvoiceTemplate.all, 'id', 'template_name'), class: "template-select" %>
   </div>
 </div>
+<script>
+
+  const templateSelect = document.querySelector('.template-select');
+  let value = templateSelect.value;
+  templateSelect.addEventListener('change', (e) => {
+    
+  });
+</script>
