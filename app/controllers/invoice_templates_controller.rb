@@ -1,4 +1,5 @@
 class InvoiceTemplatesController < ApplicationController
+  before_action :authenticate_user!
   def new
     @invoice_template = InvoiceTemplate.new
   end

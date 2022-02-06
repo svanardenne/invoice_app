@@ -91,4 +91,7 @@
       <%= link_to 'Create Template', new_invoice_template_path, class: "btn btn-lg btn-primary" %>
     </div>
   </div>
+  <div class="col-6">
+    <%= select_tag :invoice_template, options_from_collection_for_select(InvoiceTemplate.all, 'id', 'template_name'), class: "template-select" %>
+  </div>
 </div>
