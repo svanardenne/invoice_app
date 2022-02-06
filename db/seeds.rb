@@ -16,7 +16,7 @@ end
 
 User.all.each do |user|
   50.times do
-    user.invoice.create!(from_full_name: "#{user.first_name} #{user.last_name}",
-                         from_email: "#{user.first_name}@example.ca")
+    user.invoices.create!(from_full_name: "#{user.first_name} #{user.last_name}",
+                          from_email: "#{user.first_name}@example.ca")
   end
 end
