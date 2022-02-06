@@ -1,90 +1,94 @@
 <h1>New Invoice</h1>
 
-<%= form_for @invoice do |f| %>
-  <div class="field">
-    <%= f.label :from_full_name %>
-    <%= f.text_field :from_full_name, autofocus: true, value: "#{current_user.first_name} #{current_user.last_name}" %>
-  </div>
+<div class="container row">
+  <div class="col-6">
+    <%= form_for @invoice do |f| %>
+      <div class="field">
+        <%= f.label :from_full_name %>
+        <%= f.text_field :from_full_name, autofocus: true, value: "#{current_user.first_name} #{current_user.last_name}" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :from_email %>
-    <%= f.email_field :from_email, value: current_user.email  %>
-  </div>
+      <div class="field">
+        <%= f.label :from_email %>
+        <%= f.email_field :from_email, value: current_user.email  %>
+      </div>
 
-  <div class="field">
-    <%= f.label :from_phone %>
-    <%= f.text_field :from_phone, value: current_user.phone_number  %>
-  </div>
+      <div class="field">
+        <%= f.label :from_phone %>
+        <%= f.text_field :from_phone, value: current_user.phone_number  %>
+      </div>
 
-  <div class="field">
-    <%= f.label :from_address %>
-    <%= f.text_field :from_address, value: current_user.address  %>
-  </div>
+      <div class="field">
+        <%= f.label :from_address %>
+        <%= f.text_field :from_address, value: current_user.address  %>
+      </div>
 
-  <div class="field">
-    <%= f.label :from_country %>
-    <%= f.text_field :from_country, value: current_user.country  %>
-  </div>
+      <div class="field">
+        <%= f.label :from_country %>
+        <%= f.text_field :from_country, value: current_user.country  %>
+      </div>
 
-  <div class="field">
-    <%= f.label :from_province %>
-    <%= f.text_field :from_province, value: current_user.province  %>
-  </div>
+      <div class="field">
+        <%= f.label :from_province %>
+        <%= f.text_field :from_province, value: current_user.province  %>
+      </div>
 
-  <div class="field">
-    <%= f.label :from_postal_code %>
-    <%= f.text_field :from_postal_code, value: current_user.postal_code  %>
-  </div>
+      <div class="field">
+        <%= f.label :from_postal_code %>
+        <%= f.text_field :from_postal_code, value: current_user.postal_code  %>
+      </div>
 
-  <div class="field">
-    <%= f.label :to_full_name %>
-    <%= f.text_field :to_full_name  %>
-  </div>
+      <div class="field">
+        <%= f.label :to_full_name %>
+        <%= f.text_field :to_full_name  %>
+      </div>
 
-  <div class="field">
-    <%= f.label :to_email %>
-    <%= f.text_field :to_email  %>
-  </div>
+      <div class="field">
+        <%= f.label :to_email %>
+        <%= f.text_field :to_email  %>
+      </div>
 
-  <div class="field">
-    <%= f.label :to_phone %>
-    <%= f.text_field :to_phone  %>
-  </div>
+      <div class="field">
+        <%= f.label :to_phone %>
+        <%= f.text_field :to_phone  %>
+      </div>
 
-  <div class="field">
-    <%= f.label :to_address %>
-    <%= f.text_field :to_address  %>
-  </div>
+      <div class="field">
+        <%= f.label :to_address %>
+        <%= f.text_field :to_address  %>
+      </div>
 
-  <div class="field">
-    <%= f.label :to_country %>
-    <%= f.text_field :to_country  %>
-  </div>
+      <div class="field">
+        <%= f.label :to_country %>
+        <%= f.text_field :to_country  %>
+      </div>
 
-  <div class="field">
-    <%= f.label :to_province %>
-    <%= f.text_field :to_province  %>
-  </div>
+      <div class="field">
+        <%= f.label :to_province %>
+        <%= f.text_field :to_province  %>
+      </div>
 
-  <div class="field">
-    <%= f.label :to_postal_code %>
-    <%= f.text_field :to_postal_code  %>
-  </div>
+      <div class="field">
+        <%= f.label :to_postal_code %>
+        <%= f.text_field :to_postal_code  %>
+      </div>
 
-  <div class="field">
-    <%= f.label :notes %>
-    <%= f.text_area :notes  %>
-  </div>
+      <div class="field">
+        <%= f.label :notes %>
+        <%= f.text_area :notes  %>
+      </div>
 
-  <div>
-    <%= f.hidden_field :invoice_number, value: current_user.invoices.last.invoice_number + 1 %>
-  </div>
+      <div>
+        <%= f.hidden_field :invoice_number, value: current_user.invoices.last.invoice_number + 1 %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit "Create Invoice" %>
-  </div>
-<% end %>
+      <div class="actions">
+        <%= f.submit "Create Invoice" %>
+      </div>
+    <% end %>
 
- <div class="btn btn-lg btn-primary">
-    <%= link_to 'Create Template', new_invoice_template_path, class: "btn btn-lg btn-primary" %>
+    <div class="btn btn-lg btn-primary">
+      <%= link_to 'Create Template', new_invoice_template_path, class: "btn btn-lg btn-primary" %>
+    </div>
   </div>
+</div>

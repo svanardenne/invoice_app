@@ -16,7 +16,8 @@ class InvoiceTemplatesController < ApplicationController
   private
 
   def invoice_template_params
-    params.require(:invoice_template).permit(:to_full_name,
+    params.require(:invoice_template).permit(:template_name,
+                                             :to_full_name,
                                              :to_email,
                                              :to_phone,
                                              :to_address,
