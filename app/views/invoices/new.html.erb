@@ -98,8 +98,8 @@
 <script>
 
   const templateSelect = document.querySelector('.template-select');
-  let value = templateSelect.value;
+  let value = parseInt(templateSelect.value);
   templateSelect.addEventListener('change', (e) => {
-    
+    value = parseInt(e.target.value)
   });
 </script>
