@@ -1,0 +1,47 @@
+<h1>New Invoice Template</h1>
+
+<%= form_for @invoice_template do |f| %>
+  <div class="field">
+      <%= f.label :to_full_name %>
+      <%= f.text_field :to_full_name  %>
+    </div>
+
+    <div class="field">
+      <%= f.label :to_email %>
+      <%= f.text_field :to_email  %>
+    </div>
+
+    <div class="field">
+      <%= f.label :to_phone %>
+      <%= f.text_field :to_phone  %>
+    </div>
+
+    <div class="field">
+      <%= f.label :to_address %>
+      <%= f.text_field :to_address  %>
+    </div>
+
+    <div class="field">
+      <%= f.label :to_country %>
+      <%= f.text_field :to_country  %>
+    </div>
+
+    <div class="field">
+      <%= f.label :to_province %>
+      <%= f.text_field :to_province  %>
+    </div>
+
+    <div class="field">
+      <%= f.label :to_postal_code %>
+      <%= f.text_field :to_postal_code  %>
+    </div>
+
+    <div class="field">
+      <%= f.label :notes %>
+      <%= f.text_area :notes  %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Create Invoice" %>
+    </div>
+  <% end %>
