@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_06_005732) do
+ActiveRecord::Schema.define(version: 2022_02_06_044950) do
 
   create_table "invoice_items", force: :cascade do |t|
     t.date "date"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2022_02_06_005732) do
     t.string "from_phone"
     t.string "to_phone"
     t.text "notes"
+    t.integer "invoice_number"
     t.index ["user_id"], name: "index_invoices_on_user_id"
   end
 
