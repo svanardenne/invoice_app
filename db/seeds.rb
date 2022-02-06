@@ -27,6 +27,7 @@ User.create!(first_name: 'Example',
 end
 
 User.all.each do |user|
+  counter = 0
   50.times do
     user.invoices.create!(from_full_name: "#{user.first_name} #{user.last_name}",
                           from_email: "#{user.first_name}@example.ca",
@@ -44,6 +45,7 @@ User.all.each do |user|
                           to_city: Faker::Address.city,
                           to_province: Faker::Address.state_abbr,
                           to_country: Faker::Address.country,
-                          to_postal_code: Faker::Address.postcode)
+                          to_postal_code: Faker::Address.postcode,
+                          invoice_number: counter += 1)
   end
 end
