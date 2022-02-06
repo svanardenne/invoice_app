@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_06_002928) do
+ActiveRecord::Schema.define(version: 2022_02_06_005732) do
 
   create_table "invoice_items", force: :cascade do |t|
     t.date "date"
@@ -25,24 +25,25 @@ ActiveRecord::Schema.define(version: 2022_02_06_002928) do
   create_table "invoices", force: :cascade do |t|
     t.string "from_full_name"
     t.string "from_email"
-    t.integer "from_phone"
     t.string "from_address"
     t.string "from_country"
     t.string "from_province"
     t.string "from_postal_code"
-    t.string "from_notes"
     t.string "to_full_name"
     t.string "to_email"
-    t.integer "to_phone"
     t.string "to_address"
     t.string "to_country"
     t.string "to_province"
     t.string "to_postal_code"
-    t.string "to_notes"
     t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id", null: false
+    t.string "from_city"
+    t.string "to_city"
+    t.string "from_phone"
+    t.string "to_phone"
+    t.text "notes"
     t.index ["user_id"], name: "index_invoices_on_user_id"
   end
 
@@ -56,11 +57,12 @@ ActiveRecord::Schema.define(version: 2022_02_06_002928) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "first_name"
     t.string "last_name"
-    t.integer "phone_number"
     t.string "address"
     t.string "country"
     t.string "province"
     t.string "postal_code"
+    t.string "city"
+    t.string "phone_number"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
