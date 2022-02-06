@@ -72,18 +72,13 @@
   </div>
 
   <div class="field">
-    <%= f.label :status %>
-    <%= f.text_field :status  %>
+    <%= f.label :notes %>
+    <%= f.text_area :notes  %>
   </div>
 
-    <div class="field">
-      <%= f.label :notes %>
-      <%= f.text_field :notes  %>
-    </div>
-
-    <div>
-      <%= f.hidden_field :invoice_number, value: current_user.invoices.last.invoice_number + 1 %>
-    </div>
+  <div>
+    <%= f.hidden_field :invoice_number, value: current_user.invoices.last.invoice_number + 1 %>
+  </div>
 
   <div class="actions">
     <%= f.submit "Create Invoice" %>
