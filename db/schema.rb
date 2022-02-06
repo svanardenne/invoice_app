@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_05_005348) do
+ActiveRecord::Schema.define(version: 2022_02_06_002928) do
 
   create_table "invoice_items", force: :cascade do |t|
     t.date "date"
@@ -56,6 +56,11 @@ ActiveRecord::Schema.define(version: 2022_02_05_005348) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "first_name"
     t.string "last_name"
+    t.integer "phone_number"
+    t.string "address"
+    t.string "country"
+    t.string "province"
+    t.string "postal_code"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
