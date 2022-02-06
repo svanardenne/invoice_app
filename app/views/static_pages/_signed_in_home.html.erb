@@ -11,7 +11,7 @@
   <tbody>
     <% current_user.invoices.each do |invoice| %>
       <tr>
-        <th scope="row"><%= invoice.id %></th>
+        <th scope="row"><%= invoice.invoice_number %></th>
         <td><%= invoice.to_full_name %></td>
         <td><%= invoice.created_at %></td>
       </tr>

@@ -4,7 +4,7 @@ class InvoicesController < ApplicationController
   end
 
   def create
-    @invoice = Invoice.new(invoice_params)
+    @invoice = current_user.invoices.build(invoice_params)
     if @invoice.save
       flash[:success] = 'Invoice Created!'
       redirect_to root_url
@@ -23,7 +23,6 @@ class InvoicesController < ApplicationController
                                     :from_country,
                                     :from_province,
                                     :from_postal_code,
-                                    :from_notes,
                                     :to_full_name,
                                     :to_email,
                                     :to_phone,
@@ -31,7 +30,8 @@ class InvoicesController < ApplicationController
                                     :to_country,
                                     :to_province,
                                     :to_postal_code,
-                                    :to_notes,
-                                    :status)
+                                    :notes,
+                                    :status,
+                                    :invoice_number)
   end
 end
