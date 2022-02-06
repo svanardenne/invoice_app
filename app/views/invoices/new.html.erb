@@ -37,11 +37,6 @@
   </div>
 
   <div class="field">
-    <%= f.label :from_notes %>
-    <%= f.text_field :from_notes  %>
-  </div>
-
-  <div class="field">
     <%= f.label :to_full_name %>
     <%= f.text_field :to_full_name  %>
   </div>
@@ -77,14 +72,14 @@
   </div>
 
   <div class="field">
-    <%= f.label :to_notes %>
-    <%= f.text_field :to_notes  %>
-  </div>
-
-  <div class="field">
     <%= f.label :status %>
     <%= f.text_field :status  %>
   </div>
+
+    <div class="field">
+      <%= f.label :notes %>
+      <%= f.text_field :notes  %>
+    </div>
 
   <div class="actions">
     <%= f.submit "Create Invoice" %>

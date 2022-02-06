@@ -1,2 +1,20 @@
 <% provide :title, 'Home' %>
 <%= link_to 'Create Invoice', new_invoice_path, class: 'btn btn-lg btn-primary' %>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Invoice #</th>
+      <th scope="col">To</th>
+      <th scope="col">Created At</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% current_user.invoices.each do |invoice| %>
+      <tr>
+        <th scope="row"><%= invoice.id %></th>
+        <td><%= invoice.to_full_name %></td>
+        <td><%= invoice.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
