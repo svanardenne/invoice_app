@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Template</th>
+      <th scope="col">Notes</th>
+      <th scope="col">Created At</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% current_user.invoice_templates.each do |template| %>
+      <tr>
+        <th scope="row"><%= template.template_name %></th>
+        <td><%= template.notes %></td>
+        <td><%= template.created_at.strftime("%m/%d/%Y") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
