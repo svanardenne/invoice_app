@@ -38,7 +38,7 @@
 
   <div class="field">
     <%= f.label :to_full_name %>
-    <%= f.text_field :to_full_name  %>
+    <%= f.text_field :to_full_name, value: current_user.invoice_templates[current_user.profile.current_template.to_i][:to_full_name] %>
   </div>
 
   <div class="field">
