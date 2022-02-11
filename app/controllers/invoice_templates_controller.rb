@@ -14,7 +14,7 @@ class InvoiceTemplatesController < ApplicationController
   def create
     @invoice_template = current_user.invoice_templates.build(invoice_template_params)
     if @invoice_template.save
-      if current_user.profile.current_template == 'null'
+      if current_user.profile.current_template.nil?
         @current_template = current_user.profile.update(current_template: @invoice_template.id)
       end
       flash[:success] = 'Invoice Template Created!'

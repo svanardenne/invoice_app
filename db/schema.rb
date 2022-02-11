@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 2022_02_11_184522) do
   end
 
   create_table "profiles", force: :cascade do |t|
-    t.string "current_template"
+    t.integer "current_template"
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
