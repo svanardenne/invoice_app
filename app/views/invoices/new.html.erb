@@ -22,13 +22,18 @@
   </div>
 
   <div class="field">
-    <%= f.label :from_country %>
-    <%= f.text_field :from_country, value: current_user.country  %>
+    <%= f.label :from_city %>
+    <%= f.text_field :from_city, value: current_user.city  %>
   </div>
-
+  
   <div class="field">
     <%= f.label :from_province %>
     <%= f.text_field :from_province, value: current_user.province  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :from_country %>
+    <%= f.text_field :from_country, value: current_user.country  %>
   </div>
 
   <div class="field">
@@ -43,37 +48,42 @@
 
   <div class="field">
     <%= f.label :to_email %>
-    <%= f.text_field :to_email  %>
+    <%= f.text_field :to_email, value: to_field(:to_email)  %>
   </div>
 
   <div class="field">
     <%= f.label :to_phone %>
-    <%= f.text_field :to_phone  %>
+    <%= f.text_field :to_phone, value: to_field(:to_phone)  %>
   </div>
 
   <div class="field">
     <%= f.label :to_address %>
-    <%= f.text_field :to_address  %>
+    <%= f.text_field :to_address, value: to_field(:to_address)  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :to_city %>
+    <%= f.text_field :to_city, value: to_field(:to_city)  %>
   </div>
 
   <div class="field">
     <%= f.label :to_country %>
-    <%= f.text_field :to_country  %>
+    <%= f.text_field :to_country, value: to_field(:to_country)  %>
   </div>
 
   <div class="field">
     <%= f.label :to_province %>
-    <%= f.text_field :to_province  %>
+    <%= f.text_field :to_province, value: to_field(:to_province)  %>
   </div>
 
   <div class="field">
     <%= f.label :to_postal_code %>
-    <%= f.text_field :to_postal_code  %>
+    <%= f.text_field :to_postal_code, value: to_field(:to_postal_code)  %>
   </div>
 
   <div class="field">
     <%= f.label :notes %>
-    <%= f.text_area :notes  %>
+    <%= f.text_area :notes, value: to_field(:notes)  %>
   </div>
 
   <div>
