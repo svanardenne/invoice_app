@@ -25,7 +25,7 @@
         </li>
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
-            <a class="<%= "nav-link dropdown-toggle #{current_class?(edit_user_registration_path)} #{current_class?(settings_path)}" %>" 
+            <a class="<%= "nav-link dropdown-toggle #{current_class?(edit_user_registration_path)} #{current_class?(profiles_path)}" %>" 
                href="#" 
                id="navbarDropdown" 
                role="button" 
@@ -36,7 +36,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><%= link_to 'Account', edit_user_registration_path, class: "dropdown-item" %></li>
-              <li><%= link_to 'Settings', settings_path, class: 'dropdown-item' %></li>
+              <li><%= link_to 'Settings', profiles_path, class: 'dropdown-item' %></li>
               <li><hr class="dropdown-divider"></li>
               <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
             </ul>

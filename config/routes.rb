@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get '/contact', to: 'static_pages#contact'
   resources :invoices
   resources :invoice_templates
-  resources :settings
+  resources :profiles
 end

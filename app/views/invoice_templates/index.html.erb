@@ -9,7 +9,10 @@
   <tbody>
     <% current_user.invoice_templates.each do |template| %>
       <tr>
-        <th scope="row"><%= template.template_name %></th>
+        <th scope="row"><%= link_to template.template_name, profile_path(id: current_user.profile.id, 
+                                                                        current_template: template.id, 
+                                                                        current_template_name: template.template_name), 
+                                                                        method: :patch %></th>
         <td><%= template.notes %></td>
         <td><%= template.created_at.strftime("%m/%d/%Y") %></td>
       </tr>
