@@ -87,7 +87,7 @@
   </div>
 
   <div>
-    <%= f.hidden_field :invoice_number, value: current_user.invoices.last.invoice_number + 1 %>
+    <%= f.hidden_field :invoice_number, value: (current_user.invoices.any? ? current_user.invoices.last.invoice_number + 1 : 1) %>
   </div>
 
   <div class="actions">
