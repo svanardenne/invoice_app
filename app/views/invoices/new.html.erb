@@ -3,16 +3,15 @@
 <%= form_for @invoice do |f| %>
   <div class="row g-3">
 
-  <div class="col-md-6 order-md-2">
-    <div class="mb-3 col-12">
+  <div class="col-md-12 row justify-content-around">
+    <div class="mb-3 col-md-3 order-1">
       <%= link_to 'Create Template', new_invoice_template_path, class: "btn btn-lg btn-primary col-12" %>
     </div>
-
-    <div class="mb-3 col-12">
+    <div class="mb-3 col-md-3 order-2">
       <%= link_to 'Change Template', invoice_templates_path, class: "btn btn-lg btn-primary col-12" %>
     </div>
   </div>
-  <div class="col-md-6 order-md-1">
+  <div class="col-md-6">
     <div class="field mb-3">
       <%= f.label :from_full_name, class: 'form-label' %>
       <%= f.text_field :from_full_name, 
@@ -55,7 +54,8 @@
       <%= f.label :from_postal_code, class: 'form-label' %>
       <%= f.text_field :from_postal_code, value: current_user.postal_code, class: 'form-control'  %>
     </div>
-
+  </div>
+  <div class="col-md-6">
     <div class="field mb-3">
       <%= f.label :to_full_name, class: 'form-label' %>
       <%= f.text_field :to_full_name, value: to_field(:to_full_name), class: 'form-control' %>
@@ -95,8 +95,9 @@
       <%= f.label :to_postal_code, class: 'form-label' %>
       <%= f.text_field :to_postal_code, value: to_field(:to_postal_code), class: 'form-control'  %>
     </div>
-
-    <div class="field mb-3">
+  </div>
+  <div>
+    <div class="field mb-3 col-12">
       <%= f.label :notes, class: 'form-label' %>
       <%= f.text_area :notes, value: to_field(:notes), class: 'form-control'  %>
     </div>
