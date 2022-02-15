@@ -5,12 +5,16 @@
 
   <div class="col-md-12 row justify-content-around">
     <div class="mb-3 col-md-3 order-1 btn btn-primary col-12">
-      <%= link_to 'Create Template', new_invoice_template_path, class: "btn", style: 'color: white' %>
-      <%= fa_icon 'solid plus', style: 'color: white' %>
+      <%= link_to(new_invoice_template_path, class: "btn", style: 'color: white') do %>
+        Create Template
+        <%= fa_icon 'solid plus', style: 'color: white' %>
+      <% end %>
     </div>
     <div class="mb-3 col-md-3 order-2 btn btn-primary col-12">
-      <%= link_to 'Change Template', invoice_templates_path, class: "btn", style: 'color: white' %>
-      <%= fa_icon 'solid retweet', style: 'color: white' %>
+      <%= link_to(invoice_templates_path, class: "btn", style: 'color: white') do %>
+        Change Template
+        <%= fa_icon 'solid retweet', style: 'color: white' %>
+      <% end %>
     </div>
   </div>
   <div class="col-md-6">
