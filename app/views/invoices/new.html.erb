@@ -113,8 +113,10 @@
     </div>
 
     <div class="actions mb-3 btn-lg btn-primary btn" style="cursor: pointer">
-      <%= f.submit "Create Invoice", class: 'btn', style: 'color: white' %>
-      <%= fa_icon 'solid plus', style: 'color: white' %>
+      <div>
+        <%= f.submit "Create Invoice", class: 'btn', style: 'color: white' %>
+        <%= fa_icon 'solid plus', style: 'color: white' %>
+      </div>
     </div>
   </div>
   <% end %>
