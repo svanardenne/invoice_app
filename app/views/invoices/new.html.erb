@@ -4,11 +4,13 @@
   <div class="row g-3">
 
   <div class="col-md-12 row justify-content-around">
-    <div class="mb-3 col-md-3 order-1">
-      <%= link_to 'Create Template', new_invoice_template_path, class: "btn btn-primary col-12" %>
+    <div class="mb-3 col-md-3 order-1 btn btn-primary col-12">
+      <%= link_to 'Create Template', new_invoice_template_path, class: "btn", style: 'color: white' %>
+      <%= fa_icon 'solid plus', style: 'color: white' %>
     </div>
-    <div class="mb-3 col-md-3 order-2">
-      <%= link_to 'Change Template', invoice_templates_path, class: "btn btn-primary col-12" %>
+    <div class="mb-3 col-md-3 order-2 btn btn-primary col-12">
+      <%= link_to 'Change Template', invoice_templates_path, class: "btn", style: 'color: white' %>
+      <%= fa_icon 'solid retweet', style: 'color: white' %>
     </div>
   </div>
   <div class="col-md-6">
@@ -106,8 +108,9 @@
       <%= f.hidden_field :invoice_number, value: (current_user.invoices.any? ? current_user.invoices.last.invoice_number + 1 : 1) %>
     </div>
 
-    <div class="actions mb-3">
-      <%= f.submit "Create Invoice", class: 'btn btn-lg btn-primary' %>
+    <div class="actions mb-3 btn-lg btn-primary" style="cursor: pointer">
+      <%= f.submit "Create Invoice", class: 'btn', style: 'color: white' %>
+      <%= fa_icon 'solid plus', style: 'color: white' %>
     </div>
   </div>
   <% end %>

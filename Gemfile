@@ -21,6 +21,9 @@ gem 'jbuilder', '~> 2.7'
 # Use Bootstrap for styling
 gem 'bootstrap'
 
+# Use FontAwesome for Icons
+gem 'font-awesome-rails'
+
 # Use Devise for auth
 gem 'devise'
 

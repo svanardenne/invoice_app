@@ -1,5 +1,8 @@
 <% provide :title, 'Home' %>
-<%= link_to 'Create Invoice', new_invoice_path, class: 'btn btn-primary' %>
+<div class="mb-3 col-md-3 btn btn-primary">
+  <%= link_to 'Create Invoice', new_invoice_path, class: 'btn', style: 'color: white' %>
+  <%= fa_icon 'solid plus', style: 'color: white' %>
+</div>
 <table class="table">
   <thead>
     <tr>
