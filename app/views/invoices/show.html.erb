@@ -1,1 +1,31 @@
-<h1><%= @invoice.invoice_number %></h1>
+<h2>Invoice</h2>
+
+<div class="row">
+  <div class="col-md-6">
+    <ul>
+      <li><span><%= @invoice.from_full_name %></span></li>
+      <li><span><%= @invoice.from_email %></span></li>
+      <li><span><%= @invoice.from_phone %></span></li>
+      <li><span><%= @invoice.from_address %></span></li>
+      <li><span><%= @invoice.from_city %></span></li>
+      <li><span><%= @invoice.from_province %></span></li>
+      <li><span><%= @invoice.from_country %></span></li>
+      <li><span><%= @invoice.from_postal_code %></span></li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <ul>
+      <li><span><%= @invoice.to_full_name %></span></li>
+      <li><span><%= @invoice.to_email %></span></li>
+      <li><span><%= @invoice.to_phone %></span></li>
+      <li><span><%= @invoice.to_address %></span></li>
+      <li><span><%= @invoice.to_city %></span></li>
+      <li><span><%= @invoice.to_province %></span></li>
+      <li><span><%= @invoice.to_country %></span></li>
+      <li><span><%= @invoice.to_postal_code %><</span>/li>
+    </ul>
+  </div>
+  <div>
+    <span><%= @invoice.notes %></span>
+  </div>
+</div>
