@@ -18,7 +18,7 @@ class InvoiceTemplatesController < ApplicationController
       flash[:success] = 'Invoice Template Created!'
       redirect_to new_invoice_path
     else
-      render 'static_pages/home'
+      render new_invoice_template_path
     end
   end
 
