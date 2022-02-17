@@ -17,7 +17,7 @@
     <% current_user.invoices.each do |invoice| %>
       <tr>
         <th scope="row"><%= invoice.invoice_number %></th>
-        <td><%= invoice.to_full_name %></td>
+        <td><%= link_to invoice.to_full_name, invoice_path(id: invoice.id) %></td>
         <td><%= invoice.created_at.strftime("%m/%d/%Y") %></td>
       </tr>
     <% end %>

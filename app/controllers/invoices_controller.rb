@@ -1,5 +1,10 @@
 class InvoicesController < ApplicationController
   before_action :authenticate_user!
+
+  def show
+    @invoice = Invoice.find(params[:id])
+  end
+
   def new
     @invoice = Invoice.new
   end
