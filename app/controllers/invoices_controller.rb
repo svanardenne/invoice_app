@@ -10,7 +10,7 @@ class InvoicesController < ApplicationController
       flash[:success] = 'Invoice Created!'
       redirect_to root_url
     else
-      render 'static_pages/home'
+      render new_invoice_path
     end
   end
 
