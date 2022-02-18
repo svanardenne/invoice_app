@@ -48,4 +48,17 @@ User.all.each do |user|
                           to_postal_code: Faker::Address.postcode,
                           invoice_number: counter += 1)
   end
+  5.times do
+    user.invoice_templates.create!(to_full_name: full_name = "#{Faker::Name.first_name} #{Faker::Name.last_name}",
+                                   to_email: "#{full_name.split.first}@example.ca",
+                                   to_phone: Faker::PhoneNumber.phone_number,
+                                   to_address: Faker::Address.street_address,
+                                   to_city: Faker::Address.city,
+                                   to_province: Faker::Address.state_abbr,
+                                   to_country: Faker::Address.country,
+                                   to_postal_code: Faker::Address.postcode,
+                                   notes: Faker::Lorem.paragraph,
+                                   user_id: user.id,
+                                   template_name: Faker::Company.name)
+  end
 end
