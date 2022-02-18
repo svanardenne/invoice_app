@@ -19,6 +19,10 @@ class InvoicesController < ApplicationController
     end
   end
 
+  def edit
+    @invoice = Invoice.find(params[:id])
+  end
+
   private
 
   def invoice_params
