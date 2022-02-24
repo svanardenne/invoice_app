@@ -103,7 +103,7 @@
       <%= f.text_field :to_postal_code, value: to_field(:to_postal_code), class: 'form-control'  %>
     </div>
   </div>
-  <div>
+  <div class="invoice-items">
     <div class="field mb-3 col-12">
       <%= f.label :notes, class: 'form-label' %>
       <%= f.text_area :notes, value: to_field(:notes), class: 'form-control'  %>
@@ -113,10 +113,25 @@
       <%= f.hidden_field :invoice_number, 
                           value: (current_user.invoices.any? ? current_user.invoices.last.invoice_number + 1 : 1) %>
     </div>
-
-    <div class="actions mb-3" style="cursor: pointer">
-        <%= f.submit "Create Invoice", class: 'btn btn-primary btn-lg', style: 'color: white' %>
-    </div>
+    <div class="btn btn-warning">Click Me!</div>
   </div>
-  <% end %>
+  <div class="actions mb-3" style="cursor: pointer">
+    <%= f.submit "Create Invoice", class: 'btn btn-primary btn-lg', style: 'color: white' %>
+  </div>
+<% end %>
 </div>
+<script>
+  const invoiceItemList = document.querySelector('.invoice-items');
+  invoiceItemList.addEventListener('click', () => {
+    const invoiceItem = document.createElement('div');
+    invoiceItem.className = 'invoice-item'
+    const html = `
+      <div class="field mb-3 col-12">
+        STUFF!
+      </div>
+    `;
+    invoiceItem.innerHTML = html;
+    console.log(invoiceItemList);
+    invoiceItemList.appendChild(invoiceItem);
+  });
+</script>
